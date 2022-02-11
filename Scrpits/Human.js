@@ -13,40 +13,29 @@ var DoenerTrainer;
         move(_timeslice) {
         }
         draw(_position) {
-            //head
-            DoenerTrainer.crc2.fillStyle = "yellow";
-            DoenerTrainer.crc2.strokeStyle = "black";
-            DoenerTrainer.crc2.lineWidth = 2;
             DoenerTrainer.crc2.beginPath();
-            DoenerTrainer.crc2.arc(_position.x, _position.y, 0, 0, 0 * Math.PI);
-            DoenerTrainer.crc2.fill();
+            DoenerTrainer.crc2.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+            DoenerTrainer.crc2.moveTo(110, 75);
+            DoenerTrainer.crc2.arc(60, 65, 5, 0, Math.PI * 2, true); // Linkes Auge
+            DoenerTrainer.crc2.moveTo(95, 65);
+            DoenerTrainer.crc2.arc(90, 65, 5, 0, Math.PI * 2, true); // Rechtes Auge
             DoenerTrainer.crc2.stroke();
-            DoenerTrainer.crc2.closePath();
-            //eyes
-            DoenerTrainer.crc2.fillStyle = "black";
-            DoenerTrainer.crc2.beginPath();
-            DoenerTrainer.crc2.arc(_position.x - 0, _position.y - 0, 0, 0, 0 * Math.PI);
-            DoenerTrainer.crc2.fill();
-            DoenerTrainer.crc2.stroke();
-            DoenerTrainer.crc2.closePath();
-            DoenerTrainer.crc2.beginPath();
-            DoenerTrainer.crc2.arc(_position.x + 0, _position.y - 0, 0, 0, 0 * Math.PI);
-            DoenerTrainer.crc2.fill();
-            DoenerTrainer.crc2.stroke();
-            DoenerTrainer.crc2.closePath();
             //mouth
             //switch (this.feeling) {
             /*
             case FEELING.HAPPY:
-                //
+                ctx.arc(75, 75, 35, 0, Math.PI, false);
+                ctx.moveTo(65, 65);
                 break;
 
             case FEELING.ANGRY:
-                //
+                ctx.arc(75, 75, 35, 0, Math.PI, false);
+                ctx.moveTo(65, 65);
                 break;
 
             case FEELING.SLEEPY:
-                //
+                ctx.arc(75, 75, 35, 0, Math.PI, false);
+                ctx.moveTo(65, 65);
                 break;
             */
             //}
@@ -54,5 +43,4 @@ var DoenerTrainer;
     }
     DoenerTrainer.Human = Human;
 })(DoenerTrainer || (DoenerTrainer = {}));
-;
 //# sourceMappingURL=Human.js.map

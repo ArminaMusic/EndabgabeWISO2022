@@ -30,8 +30,6 @@ var DoenerTrainer;
     function hdndlLoad(_event) {
         let canvas = document.querySelector("canvas");
         DoenerTrainer.crc2 = canvas.getContext("2d");
-        let startButton = document.querySelector(".startButton");
-        startButton.addEventListener("pointerup", startGame);
         drawDoenerBude();
         window.setInterval(update, 1000);
     }
@@ -46,7 +44,7 @@ var DoenerTrainer;
     }
     function drawDoenerBude() {
         //white bg canvas
-        DoenerTrainer.crc2.fillStyle = "white";
+        DoenerTrainer.crc2.fillStyle = "red";
         DoenerTrainer.crc2.fillRect(0, 0, 800, 600);
         //border
         DoenerTrainer.crc2.beginPath();
@@ -57,9 +55,25 @@ var DoenerTrainer;
         DoenerTrainer.crc2.lineTo(800, 500);
         DoenerTrainer.crc2.stroke();
         //bar
-        //cuttingboard
-        //cashier
+        DoenerTrainer.crc2.moveTo(0, 150);
+        DoenerTrainer.crc2.lineTo(800, 150);
+        DoenerTrainer.crc2.stroke();
         //storage
+        DoenerTrainer.crc2.moveTo(550, 0);
+        DoenerTrainer.crc2.lineTo(550, 150);
+        DoenerTrainer.crc2.stroke();
+        //cuttingboard#
+        DoenerTrainer.crc2.beginPath();
+        DoenerTrainer.crc2.moveTo(350, 0);
+        DoenerTrainer.crc2.lineTo(350, 150);
+        DoenerTrainer.crc2.stroke();
+        DoenerTrainer.crc2.closePath();
+        DoenerTrainer.crc2.beginPath();
+        DoenerTrainer.crc2.fillRect(30, 25, 100, 100);
+        DoenerTrainer.crc2.strokeRect(370, 30, 160, 100);
+        DoenerTrainer.crc2.fill();
+        DoenerTrainer.crc2.closePath();
+        //cashier
     }
     function clickIngredient() {
         //
@@ -94,5 +108,4 @@ var DoenerTrainer;
         //
     }
 })(DoenerTrainer || (DoenerTrainer = {}));
-;
 //# sourceMappingURL=Main.js.map
