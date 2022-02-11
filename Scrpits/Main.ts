@@ -1,7 +1,31 @@
+/*
+Aufgabe: Endabagbe Döner Trainer
+Name: Armina Music
+Matrikel: 268021
+Datum: 11.02.22
+*/
 namespace DoenerTrainer {
 
-    export enum DOENER_EVENT {
-        
+    let formData: FormData;
+    let employees: Employee[] = [];
+    let taskPositions: Vector[] = [];
+
+    let allMenu: string[] = ["Döner", "Yufka", "Lahmacun"];
+    let allIngredients: string[] = ["Salat", "Zwiebel", "Mais", "Tomaten", "Kraut", "Fleisch"];
+    let completeOrder: string[] = [];
+    let choosenIngredients: string[] = [];
+
+    export enum MOOD {
+        HAPPY,
+        ANGRY,
+        SLEEPY
+    }
+
+    export enum TASK {
+        BAR,
+        PREPARE,
+        ORDER
+        REFILL, 
     }
 
     window.addEventListener("load", handleLoad);
@@ -25,5 +49,5 @@ namespace DoenerTrainer {
         }
     
     }
-
+    
 };
