@@ -1,3 +1,9 @@
+/*
+Aufgabe: Endabagbe Döner Trainer
+Name: Armina Music
+Matrikel: 268021
+Datum: 11.02.22
+*/
 namespace DoenerTrainer {
     export abstract class Employee extends Moveable {
         protected abstract readonly feelings: string[];
@@ -11,17 +17,30 @@ namespace DoenerTrainer {
         //draw Employee
         public draw(): void {
             crc2.save();
-            crc2.fillStyle = "blue";
-            crc2.translate(this.position.x, this.position.y);
-            crc2.beginPath();
-            crc2.arc(0, 0, 30, 0, 360);
-            crc2.fill();
+            //
             crc2.restore();
         }
 
         //update Feelings of Employee
         public updateFeelings(_addend: number): void {
             this.feeling = this.feelings[this.feelings.indexOf(this.feeling) + _addend];
+
+            /*
+            updateFeeling(): void {
+            this.satisfaction = this.satisfaction - 5;
+    
+            if (this.satisfaction >= 67) {
+                this.feeling = FEELING.HAPPY;
+            }
+    
+            if (this.satisfaction < 67 && this.satisfaction > 33) {
+                this.feeling = FEELING.ANGRY;
+            }
+    
+            if (this.satisfaction <= 33) {
+                this.feeling = FEELING.SLEEPY;
+            }
+            */
         }
 
     }
