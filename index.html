@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Döner Trainer</title>
+    <script src="Scrpits/Main.js"></script>
+    <script src="Scrpits/Container.js"></script>
+    <script src="Scrpits/Customer.ts"></script>
+    <script src="Scrpits/Movable.js"></script>
+    <script src="Scrpits/Paths.js"></script>
+    <script src="Scrpits/Employee.js"></script>
+    <script src="Scrpits/Vector.js"></script>
+</head>
+<body>
+    <form id="settings">
+        <fieldset>
+            <legend>Employee in your Dönerbude</legend>
+            <label for="employeeAmount">Amount of employees</label>
+            <input type="number" name="employeeAmount" min="1" max="5" step="1" value="3">
+        </fieldset>
+        <fieldset>
+            <legend>Rest needed by employees</legend>
+            <label for="restTime">Amount of rest needed (min)</label>
+            <input type="number" name="restTime" min="1" max="5" step="1" value="3">
+        </fieldset>
+        <fieldset>
+            <legend>Average amount of Customers</legend>
+            <label for="customerAmount">Average amount of customers per minute</label>
+            <input type="number" name="customerAmount" min="1" max="5" step="1" value="1">
+        </fieldset>
+        <fieldset>
+            <legend>Dönerbuden Stock capacity</legend>
+            <label for="stockCapacity">Stock capacity (%)</label>
+            <input type="range" name="containerCapacity" min="0" max="100" step="10" value="50">
+        </fieldset>
+        <fieldset>
+            <legend>Dönerbuden Container capacity</legend>
+            <label for="containerCapacity">Container capacity (%)</label>
+            <input type="range" name="containerCapacity" min="0" max="100" step="10" value="50">
+        </fieldset>
+        <br>
+        <button type="button" id="startButton">Start Game</button>
+    </form>
+    <canvas width="1300" height="800"></canvas>
+</body>
+</html>
