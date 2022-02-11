@@ -69,9 +69,18 @@ namespace DoenerTrainer {
         crc2.lineTo(800, 500);
         crc2.stroke();
 
+        //cashier
+        crc2.moveTo(350, 0);
+        crc2.lineTo(350, 150);
+        crc2.stroke();
+
         //bar
         crc2.moveTo(0, 150);
         crc2.lineTo(800, 150);
+        crc2.stroke();
+
+        crc2.moveTo(150, 150);
+        crc2.lineTo(150, 150);
         crc2.stroke();
 
         //storage
@@ -79,23 +88,14 @@ namespace DoenerTrainer {
         crc2.lineTo(550, 150);
         crc2.stroke();
 
-        //cuttingboard#
-        crc2.beginPath();
+        //cuttingboard
         crc2.moveTo(350, 0);
         crc2.lineTo(350, 150);
         crc2.stroke();
-        crc2.closePath();
-
-        crc2.beginPath();
+    
+        crc2.fillStyle = "blue";
         crc2.fillRect(30, 25, 100, 100);
-        crc2.strokeRect(370, 30, 160, 100);
         crc2.fill();
-        crc2.closePath();
-        
-        
-
-        //cashier
-
         
     }
 
