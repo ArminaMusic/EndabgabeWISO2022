@@ -6,12 +6,10 @@ Datum: 11.02.22
 */
 
 namespace DoenerTrainer {
-
     export class Human {
         velocity: Vector;
         position: Vector;
         //feeling: FEELING;
-
 
         constructor(_position: Vector) {//
         }
@@ -21,43 +19,30 @@ namespace DoenerTrainer {
 
         draw(_position: Vector): void {
 
-            //head
-            crc2.fillStyle = "yellow";
-            crc2.strokeStyle = "black";
-            crc2.lineWidth = 2;
             crc2.beginPath();
-            crc2.arc(_position.x, _position.y, 0, 0, 0 * Math.PI);
-            crc2.fill();
+            crc2.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+            crc2.moveTo(110, 75);
+            crc2.arc(60, 65, 5, 0, Math.PI * 2, true);  // Linkes Auge
+            crc2.moveTo(95, 65);
+            crc2.arc(90, 65, 5, 0, Math.PI * 2, true);  // Rechtes Auge
             crc2.stroke();
-            crc2.closePath();
-
-            //eyes
-            crc2.fillStyle = "black";
-            crc2.beginPath();
-            crc2.arc(_position.x - 0, _position.y - 0, 0, 0, 0 * Math.PI);
-            crc2.fill();
-            crc2.stroke();
-            crc2.closePath();
-
-            crc2.beginPath();
-            crc2.arc(_position.x + 0, _position.y - 0, 0, 0, 0 * Math.PI);
-            crc2.fill();
-            crc2.stroke();
-            crc2.closePath();
 
             //mouth
             //switch (this.feeling) {
                 /*
                 case FEELING.HAPPY:
-                    //
+                    ctx.arc(75, 75, 35, 0, Math.PI, false);    
+                    ctx.moveTo(65, 65);
                     break;
 
                 case FEELING.ANGRY:
-                    //
+                    ctx.arc(75, 75, 35, 0, Math.PI, false);    
+                    ctx.moveTo(65, 65);
                     break;
 
                 case FEELING.SLEEPY:
-                    //
+                    ctx.arc(75, 75, 35, 0, Math.PI, false);    
+                    ctx.moveTo(65, 65);
                     break;
                 */
 
