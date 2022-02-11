@@ -56,47 +56,49 @@ namespace DoenerTrainer {
 
         //white bg canvas
         crc2.fillStyle = "red";
-        crc2.fillRect(0, 0, 800, 600);
+        crc2.fillRect(0, 0, 1300, 800);
 
         //border
         crc2.beginPath();
-        crc2.rect(0, 0, 800, 600);
-
-        //game infos
-
-        //customer
-        crc2.moveTo(0, 500);
-        crc2.lineTo(800, 500);
-        crc2.stroke();
-
-        //cashier
-        crc2.moveTo(350, 0);
-        crc2.lineTo(350, 150);
-        crc2.stroke();
-
-        //bar
-        crc2.moveTo(0, 150);
-        crc2.lineTo(800, 150);
-        crc2.stroke();
-
-        crc2.moveTo(150, 150);
-        crc2.lineTo(150, 150);
-        crc2.stroke();
+        crc2.rect(0, 0, 1300, 800);
+        crc2.closePath();
 
         //storage
-        crc2.moveTo(550, 0);
-        crc2.lineTo(550, 150);
-        crc2.stroke();
+        crc2.beginPath();
+        crc2.fillRect(780, 50, 480, 150);
+        crc2.clearRect(780, 50, 480, 150);
+        crc2.fill();
+        crc2.closePath();
 
         //cuttingboard
-        crc2.moveTo(350, 0);
-        crc2.lineTo(350, 150);
-        crc2.stroke();
-    
-        crc2.fillStyle = "blue";
-        crc2.fillRect(30, 25, 100, 100);
+        crc2.beginPath();
+        crc2.fillRect(270, 50, 500, 150);
+        crc2.clearRect(270, 50, 500, 150);
         crc2.fill();
+        crc2.closePath();
+
+        //cuttent Order
+        crc2.beginPath();
+        crc2.fillRect(30, 50, 230, 300);
+        crc2.clearRect(30, 50, 230, 300);
+        crc2.fill();
+        crc2.closePath();
+
+        //Cashier
+        crc2.beginPath();
+        crc2.fillRect(850, 600, 410, 150);
+        crc2.clearRect(850, 600, 410, 150);
+        crc2.fill();
+        crc2.closePath();
+
+        //bar
+        crc2.beginPath();
+        crc2.fillRect(30, 500, 810, 250);
+        crc2.clearRect(30, 500, 810, 250);
+        crc2.fill();
+        crc2.closePath();
         
+        //game infos
     }
 
 
