@@ -32,11 +32,10 @@ namespace DoenerTrainer {
 
     export let crc2: CanvasRenderingContext2D;
 
+
     function hdndlLoad(_event: Event): void {
         let canvas: HTMLCanvasElement = <HTMLCanvasElement>document.querySelector("canvas");
         crc2 = canvas.getContext("2d")!;
-        let startButton: HTMLButtonElement = <HTMLButtonElement>document.querySelector(".startButton");
-        startButton.addEventListener("pointerup", startGame);
 
         drawDoenerBude();
         window.setInterval(update, 1000);
@@ -53,11 +52,10 @@ namespace DoenerTrainer {
         canvas.classList.remove("hidden");
     }
 
-
     function drawDoenerBude(): void {
 
         //white bg canvas
-        crc2.fillStyle = "white";
+        crc2.fillStyle = "red";
         crc2.fillRect(0, 0, 800, 600);
 
         //border
@@ -65,7 +63,6 @@ namespace DoenerTrainer {
         crc2.rect(0, 0, 800, 600);
 
         //game infos
-        
 
         //customer
         crc2.moveTo(0, 500);
@@ -73,12 +70,33 @@ namespace DoenerTrainer {
         crc2.stroke();
 
         //bar
+        crc2.moveTo(0, 150);
+        crc2.lineTo(800, 150);
+        crc2.stroke();
 
-        //cuttingboard
+        //storage
+        crc2.moveTo(550, 0);
+        crc2.lineTo(550, 150);
+        crc2.stroke();
+
+        //cuttingboard#
+        crc2.beginPath();
+        crc2.moveTo(350, 0);
+        crc2.lineTo(350, 150);
+        crc2.stroke();
+        crc2.closePath();
+
+        crc2.beginPath();
+        crc2.fillRect(30, 25, 100, 100);
+        crc2.strokeRect(370, 30, 160, 100);
+        crc2.fill();
+        crc2.closePath();
+        
+        
 
         //cashier
 
-        //storage
+        
     }
 
 
@@ -122,4 +140,4 @@ namespace DoenerTrainer {
         //
     }
     
-};
+}
