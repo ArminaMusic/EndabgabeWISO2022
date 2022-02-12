@@ -40,16 +40,16 @@ namespace DoenerTrainer {
         drawDoenerBude();
         window.setInterval(update, 1000);
 
-        crc2.canvas.addEventListener('click', function(event){
-            var mouseX = event.clientX - crc2.canvas.offsetLeft;
-            var mouseY = event.clientY - crc2.canvas.offsetTop;
-            var status = document.getElementById('status');
-            status.innerHTML = mouseX+" | "+mouseY;
-           
+        crc2.canvas.addEventListener("click", function(event): MouseEvent {
+            var mouseX: number = event.clientX - crc2.canvas.offsetLeft;
+            var mouseY: number = event.clientY - crc2.canvas.offsetTop;
+            var status: HTMLElement = document.getElementById("status");
+            status.innerHTML = mouseX + "|" + mouseY;
         });
 
-
         handleCustomers();
+
+
     }
 
     //function to start the game

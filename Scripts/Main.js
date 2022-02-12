@@ -34,11 +34,11 @@ var DoenerTrainer;
         //function to build Dönerbude
         drawDoenerBude();
         window.setInterval(update, 1000);
-        DoenerTrainer.crc2.canvas.addEventListener('click', function (event) {
+        DoenerTrainer.crc2.canvas.addEventListener("click", function (event) {
             var mouseX = event.clientX - DoenerTrainer.crc2.canvas.offsetLeft;
             var mouseY = event.clientY - DoenerTrainer.crc2.canvas.offsetTop;
-            var status = document.getElementById('status');
-            status.innerHTML = mouseX + " | " + mouseY;
+            var status = document.getElementById("status");
+            status.innerHTML = mouseX + "|" + mouseY;
         });
         DoenerTrainer.handleCustomers();
     }
