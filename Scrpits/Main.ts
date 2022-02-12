@@ -2,7 +2,7 @@
 Aufgabe: Endabagbe Döner Trainer
 Name: Armina Music
 Matrikel: 268021
-Datum: 11.02.22
+Datum: 12.02.22
 */
 namespace DoenerTrainer {
 
@@ -11,7 +11,7 @@ namespace DoenerTrainer {
     let taskPositions: Vector[] = [];
 
     let theMenu: string[] = ["Döner", "Yufka", "Lahmacun"];
-    let allIngredients: string[] = ["Salat", "Zwiebel", "Mais", "Tomaten", "Kraut", "Fleisch"];
+    let allIngredients: string[] = ["Salat", "Zwiebel", "Mais", "Tomaten", "Kraut", "Dönerfleisch", "Hackfleisch"];
     let completeOrder: string[] = [];
     let choosenIngredients: string[] = [];
 
@@ -54,7 +54,7 @@ namespace DoenerTrainer {
 
     function drawDoenerBude(): void {
 
-        //white bg canvas
+        //bg canvas
         crc2.fillStyle = "red";
         crc2.fillRect(0, 0, 1300, 800);
 
@@ -98,7 +98,7 @@ namespace DoenerTrainer {
         crc2.fill();
         crc2.closePath();
         
-        //game infos
+        //get game infos from html form
     }
 
 
@@ -121,25 +121,21 @@ namespace DoenerTrainer {
         containerCapacity = Number(formData.get("containerCapacity"));
 
         /*
-        corn = capIngredients;
-        lettuce = capIngredients;
-        onion = capIngredients;
-        cabbage = capIngredients;
-        tomato = capIngredients;
+        corn = capacityIngredients; /Mais
         */  
     }
 
 
     function update(): void {
-        // console.log("Update")    
+        // console.log(update)    
     }
 
     function createOrder(): void {
-        //
+        // console.log(createOrder)
     }
 
     function checkOrder(): void {
-        //
+        // console.log(checkOrder)
     }
     
 }
