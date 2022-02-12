@@ -2,7 +2,7 @@
 Aufgabe: Endabagbe Döner Trainer
 Name: Armina Music
 Matrikel: 268021
-Datum: 11.02.22
+Datum: 12.02.22
 */
 namespace DoenerTrainer {
     export abstract class Moveable {
@@ -11,12 +11,10 @@ namespace DoenerTrainer {
 
         constructor(_position?: Vector) {
             // console.log("Moveable constructor");
-
             if (_position)
                 this.position = _position.copy();
             else
                 this.position = new Vector(0, 0);
-
             this.velocity = new Vector(0, 0);
         }   
 

@@ -7,6 +7,7 @@ Datum: 11.02.22
 
 namespace DoenerTrainer {
 
+//all Ingredients = Salat, Zwiebel, Mais, Tomaten, Kraut, Dönerfleisch, Hackfleisch, Soßé
     export abstract class Ingredient{
         color: string;
         position: Vector;
