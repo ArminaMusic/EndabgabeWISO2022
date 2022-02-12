@@ -2,7 +2,7 @@
 Aufgabe: Endabagbe Döner Trainer
 Name: Armina Music
 Matrikel: 268021
-Datum: 11.02.22
+Datum: 12.02.22
 */
 var DoenerTrainer;
 (function (DoenerTrainer) {
@@ -10,7 +10,7 @@ var DoenerTrainer;
     let employees = [];
     let taskPositions = [];
     let theMenu = ["Döner", "Yufka", "Lahmacun"];
-    let allIngredients = ["Salat", "Zwiebel", "Mais", "Tomaten", "Kraut", "Fleisch"];
+    let allIngredients = ["Salat", "Zwiebel", "Mais", "Tomaten", "Kraut", "Dönerfleisch", "Hackfleisch"];
     let completeOrder = [];
     let choosenIngredients = [];
     let MOOD;
@@ -43,7 +43,7 @@ var DoenerTrainer;
         canvas.classList.remove("hidden");
     }
     function drawDoenerBude() {
-        //white bg canvas
+        //bg canvas
         DoenerTrainer.crc2.fillStyle = "red";
         DoenerTrainer.crc2.fillRect(0, 0, 1300, 800);
         //border
@@ -80,7 +80,7 @@ var DoenerTrainer;
         DoenerTrainer.crc2.clearRect(30, 500, 810, 250);
         DoenerTrainer.crc2.fill();
         DoenerTrainer.crc2.closePath();
-        //game infos
+        //get game infos from html form
     }
     function clickIngredient() {
         //
@@ -98,21 +98,17 @@ var DoenerTrainer;
         stockCapacity = Number(formData.get("stockCapacity"));
         containerCapacity = Number(formData.get("containerCapacity"));
         /*
-        corn = capIngredients;
-        lettuce = capIngredients;
-        onion = capIngredients;
-        cabbage = capIngredients;
-        tomato = capIngredients;
+        corn = capacityIngredients; /Mais
         */
     }
     function update() {
-        // console.log("Update")    
+        // console.log(update)    
     }
     function createOrder() {
-        //
+        // console.log(createOrder)
     }
     function checkOrder() {
-        //
+        // console.log(checkOrder)
     }
 })(DoenerTrainer || (DoenerTrainer = {}));
 //# sourceMappingURL=Main.js.map
