@@ -6,7 +6,7 @@ Datum: 12.02.22
 */
 var DoenerTrainer;
 (function (DoenerTrainer) {
-    class Human {
+    class Human extends DoenerTrainer.Moveable {
         constructor(_position) {
         }
         move(_timeslice) {

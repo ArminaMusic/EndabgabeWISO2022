@@ -8,8 +8,10 @@ Datum: 11.02.22
 body, html {
     margin: 0px;
     height: 100%;
-    background-color: #e2e2e2;
+    background-color: #333;
     overflow: hidden;
+    color: #eee;
+    font-size: 97px;
 }
 
 header {
@@ -17,5 +19,9 @@ header {
 }
 
 canvas {
+    margin-left: 200px;
+}
+
+h2 {
     margin-left: 200px;
 }

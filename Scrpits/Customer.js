@@ -11,9 +11,10 @@ var DoenerTrainer;
             super(_position);
             this.position = _position;
             this.satisfaction = _satisfaction;
+            this.path = [new DoenerTrainer.Vector(143, 715), new DoenerTrainer.Vector(1060, 715)];
+            this.queuePositions = [new DoenerTrainer.Vector(911, 655), new DoenerTrainer.Vector(1060, 655), new DoenerTrainer.Vector(1215, 655), new DoenerTrainer.Vector(1215, 735), new DoenerTrainer.Vector(1060, 735)];
         }
         move() {
-            //
         }
         updateFeeling() {
             this.satisfaction = this.satisfaction - 5;

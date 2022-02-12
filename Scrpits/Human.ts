@@ -5,7 +5,7 @@ Matrikel: 268021
 Datum: 12.02.22
 */
 namespace DoenerTrainer {
-    export class Human {
+    export class Human extends Moveable {
         velocity: Vector;
         position: Vector;
         feeling: FEELING;
