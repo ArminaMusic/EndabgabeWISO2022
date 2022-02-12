@@ -23,7 +23,7 @@ namespace DoenerTrainer {
 
         //update Feelings of Employee
         public updateFeelings(_addend: number): void {
-            this.feeling = this.feelings[this.feelings.indexOf(this.feeling) + _addend];
+            //this.feeling = this.feelings[this.feelings.indexOf(this.feeling) + _addend];
 
             /*
             updateFeeling(): void {

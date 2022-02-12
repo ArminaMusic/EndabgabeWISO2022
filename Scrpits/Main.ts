@@ -11,7 +11,7 @@ namespace DoenerTrainer {
     let taskPositions: Vector[] = [];
 
     let theMenu: string[] = ["Döner", "Yufka", "Lahmacun"];
-    let allIngredients: string[] = ["Salat", "Zwiebel", "Mais", "Tomaten", "Kraut", "Dönerfleisch", "Hackfleisch"];
+    let allIngredients: string[] = ["Salat", "Zwiebel", "Mais", "Tomaten", "Kraut", "Dönerfleisch", "Hackfleisch", "Soße"];
     let completeOrder: string[] = [];
     let choosenIngredients: string[] = [];
 
@@ -33,24 +33,46 @@ namespace DoenerTrainer {
 
     export let crc2: CanvasRenderingContext2D;
 
-
     function hdndlLoad(_event: Event): void {
         let canvas: HTMLCanvasElement = <HTMLCanvasElement>document.querySelector("canvas");
         crc2 = canvas.getContext("2d")!;
-
+        //function to build Dönerbude
         drawDoenerBude();
         window.setInterval(update, 1000);
     }
 
+    //function to start the game
     function startGame(): void {
         formData = new FormData(document.forms[0]);
+        //play getSettings funktion to get game settings
         getSettings();
-
         let form: HTMLFormElement = <HTMLFormElement>document.querySelector("form");
         let body: HTMLBodyElement = <HTMLBodyElement>document.querySelector("body");
         body.removeChild(form);
         let canvas: HTMLCanvasElement = <HTMLCanvasElement>document.querySelector("canvas");
+        //hide setting page
         canvas.classList.remove("hidden");
+    }
+
+    //function to get setting drom FromDate to set up the game
+    function getSettings(): void {
+        formData = new FormData(document.forms[0]);
+        let employeeAmount: number;
+        let employeeRestTime: number;
+        let customerAmount: number;
+        let stockCapacity: number;
+        let containerCapacity: number;
+
+        //read imput from FormData
+        employeeAmount = Number(formData.get("employeeAmount"));
+        employeeRestTime = Number(formData.get("restTime"));
+        customerAmount = Number(formData.get("customerAmount"));
+        stockCapacity = Number(formData.get("stockCapacity"));
+        containerCapacity = Number(formData.get("containerCapacity"));
+
+        /*
+        corn = capacityIngredients; /Mais
+        */  
     }
 
     function drawDoenerBude(): void {
@@ -116,30 +138,21 @@ namespace DoenerTrainer {
         //get game infos from html form
     }
 
+    // function to build a Fooditem from order 
+    function buildFoodItem(): void {
+    //clickTheke -> to use
+            //check if full 
+                //yes --> function: build "FoodItem"
+                //no --> go to Storage and refill
+                    //check if Storage is full
+                        //yes --> take and go to "cuttingBoard" and cut items (Task-Time -> Countdown)
+                        //no --> funktion : clickIngredient - in Storage -> to refill (Task-Time -> Countdown)
+    }
 
+    // function to refill Storage of Ingredients
     function clickIngredient(): void {
-        //
+        //        
     }
-
-    function getSettings(): void {
-        formData = new FormData(document.forms[0]);
-        let employeeAmount: number;
-        let employeeRestTime: number;
-        let customerAmount: number;
-        let stockCapacity: number;
-        let containerCapacity: number;
-
-        employeeAmount = Number(formData.get("employeeAmount"));
-        employeeRestTime = Number(formData.get("restTime"));
-        customerAmount = Number(formData.get("customerAmount"));
-        stockCapacity = Number(formData.get("stockCapacity"));
-        containerCapacity = Number(formData.get("containerCapacity"));
-
-        /*
-        corn = capacityIngredients; /Mais
-        */  
-    }
-
 
     function update(): void {
         // console.log(update)    

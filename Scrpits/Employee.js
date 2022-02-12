@@ -19,7 +19,7 @@ var DoenerTrainer;
         }
         //update Feelings of Employee
         updateFeelings(_addend) {
-            this.feeling = this.feelings[this.feelings.indexOf(this.feeling) + _addend];
+            //this.feeling = this.feelings[this.feelings.indexOf(this.feeling) + _addend];
             /*
             updateFeeling(): void {
             this.satisfaction = this.satisfaction - 5;

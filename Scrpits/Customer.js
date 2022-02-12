@@ -16,21 +16,16 @@ var DoenerTrainer;
             //
         }
         updateFeeling() {
-            /*
             this.satisfaction = this.satisfaction - 5;
-    
             if (this.satisfaction >= 67) {
-                this.feeling = FEELING.HAPPY;
+                this.feeling = DoenerTrainer.FEELING.HAPPY;
             }
-    
             if (this.satisfaction < 67 && this.satisfaction > 33) {
-                this.feeling = FEELING.ANGRY;
+                this.feeling = DoenerTrainer.FEELING.ANGRY;
             }
-    
             if (this.satisfaction <= 33) {
-                this.feeling = FEELING.SLEEPY;
+                this.feeling = DoenerTrainer.FEELING.SLEEPY;
             }
-            */
         }
     }
     DoenerTrainer.Customer = Customer;

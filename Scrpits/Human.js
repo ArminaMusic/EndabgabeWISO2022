@@ -7,7 +7,6 @@ Datum: 12.02.22
 var DoenerTrainer;
 (function (DoenerTrainer) {
     class Human {
-        //feeling: FEELING;
         constructor(_position) {
         }
         move(_timeslice) {
@@ -20,25 +19,22 @@ var DoenerTrainer;
             DoenerTrainer.crc2.moveTo(95, 65);
             DoenerTrainer.crc2.arc(90, 65, 5, 0, Math.PI * 2, true); // Rechtes Auge
             DoenerTrainer.crc2.stroke();
-            //mouth
-            //switch (this.feeling) {
-            /*
-            case FEELING.HAPPY:
-                ctx.arc(75, 75, 35, 0, Math.PI, false);
-                ctx.moveTo(65, 65);
-                break;
-
-            case FEELING.ANGRY:
-                ctx.arc(75, 75, 35, 0, Math.PI, false);
-                ctx.moveTo(65, 65);
-                break;
-
-            case FEELING.SLEEPY:
-                ctx.arc(75, 75, 35, 0, Math.PI, false);
-                ctx.moveTo(65, 65);
-                break;
-            */
-            //}
+            //draw mouth with switch-case to get feelings of customer or employee 
+            //emotion will be definend in Employee and Customer Class 
+            switch (this.feeling) {
+                case DoenerTrainer.FEELING.HAPPY:
+                    DoenerTrainer.crc2.arc(75, 75, 35, 0, Math.PI, false);
+                    DoenerTrainer.crc2.moveTo(65, 65);
+                    break;
+                case DoenerTrainer.FEELING.ANGRY:
+                    DoenerTrainer.crc2.arc(75, 75, 35, 0, Math.PI, false);
+                    DoenerTrainer.crc2.moveTo(65, 65);
+                    break;
+                case DoenerTrainer.FEELING.SLEEPY:
+                    DoenerTrainer.crc2.arc(75, 75, 35, 0, Math.PI, false);
+                    DoenerTrainer.crc2.moveTo(65, 65);
+                    break;
+            }
         }
     }
     DoenerTrainer.Human = Human;

@@ -20,7 +20,6 @@ namespace DoenerTrainer {
         }
     
         updateFeeling(): void {
-            /*
             this.satisfaction = this.satisfaction - 5;
     
             if (this.satisfaction >= 67) {
@@ -34,7 +33,6 @@ namespace DoenerTrainer {
             if (this.satisfaction <= 33) {
                 this.feeling = FEELING.SLEEPY;
             }
-            */
         }
     
     }

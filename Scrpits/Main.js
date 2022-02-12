@@ -10,7 +10,7 @@ var DoenerTrainer;
     let employees = [];
     let taskPositions = [];
     let theMenu = ["Döner", "Yufka", "Lahmacun"];
-    let allIngredients = ["Salat", "Zwiebel", "Mais", "Tomaten", "Kraut", "Dönerfleisch", "Hackfleisch"];
+    let allIngredients = ["Salat", "Zwiebel", "Mais", "Tomaten", "Kraut", "Dönerfleisch", "Hackfleisch", "Soße"];
     let completeOrder = [];
     let choosenIngredients = [];
     let FEELING;
@@ -31,17 +31,39 @@ var DoenerTrainer;
     function hdndlLoad(_event) {
         let canvas = document.querySelector("canvas");
         DoenerTrainer.crc2 = canvas.getContext("2d");
+        //function to build Dönerbude
         drawDoenerBude();
         window.setInterval(update, 1000);
     }
+    //function to start the game
     function startGame() {
         formData = new FormData(document.forms[0]);
+        //play getSettings funktion to get game settings
         getSettings();
         let form = document.querySelector("form");
         let body = document.querySelector("body");
         body.removeChild(form);
         let canvas = document.querySelector("canvas");
+        //hide setting page
         canvas.classList.remove("hidden");
+    }
+    //function to get setting drom FromDate to set up the game
+    function getSettings() {
+        formData = new FormData(document.forms[0]);
+        let employeeAmount;
+        let employeeRestTime;
+        let customerAmount;
+        let stockCapacity;
+        let containerCapacity;
+        //read imput from FormData
+        employeeAmount = Number(formData.get("employeeAmount"));
+        employeeRestTime = Number(formData.get("restTime"));
+        customerAmount = Number(formData.get("customerAmount"));
+        stockCapacity = Number(formData.get("stockCapacity"));
+        containerCapacity = Number(formData.get("containerCapacity"));
+        /*
+        corn = capacityIngredients; /Mais
+        */
     }
     function drawDoenerBude() {
         //bg canvas
@@ -95,24 +117,19 @@ var DoenerTrainer;
         DoenerTrainer.crc2.closePath();
         //get game infos from html form
     }
-    function clickIngredient() {
-        //
+    // function to build a Fooditem from order 
+    function buildFoodItem() {
+        //clickTheke -> to use
+        //check if full 
+        //yes --> function: build "FoodItem"
+        //no --> go to Storage and refill
+        //check if Storage is full
+        //yes --> take and go to "cuttingBoard" and cut items (Task-Time -> Countdown)
+        //no --> funktion : clickIngredient - in Storage -> to refill (Task-Time -> Countdown)
     }
-    function getSettings() {
-        formData = new FormData(document.forms[0]);
-        let employeeAmount;
-        let employeeRestTime;
-        let customerAmount;
-        let stockCapacity;
-        let containerCapacity;
-        employeeAmount = Number(formData.get("employeeAmount"));
-        employeeRestTime = Number(formData.get("restTime"));
-        customerAmount = Number(formData.get("customerAmount"));
-        stockCapacity = Number(formData.get("stockCapacity"));
-        containerCapacity = Number(formData.get("containerCapacity"));
-        /*
-        corn = capacityIngredients; /Mais
-        */
+    // function to refill Storage of Ingredients
+    function clickIngredient() {
+        //        
     }
     function update() {
         // console.log(update)    

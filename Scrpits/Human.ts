@@ -4,12 +4,11 @@ Name: Armina Music
 Matrikel: 268021
 Datum: 12.02.22
 */
-
 namespace DoenerTrainer {
     export class Human {
         velocity: Vector;
         position: Vector;
-        //feeling: FEELING;
+        feeling: FEELING;
 
         constructor(_position: Vector) {//
         }
@@ -27,26 +26,24 @@ namespace DoenerTrainer {
             crc2.arc(90, 65, 5, 0, Math.PI * 2, true);  // Rechtes Auge
             crc2.stroke();
 
-            //mouth
-            //switch (this.feeling) {
-                /*
+            //draw mouth with switch-case to get feelings of customer or employee 
+                //emotion will be definend in Employee and Customer Class 
+            switch (this.feeling) {
                 case FEELING.HAPPY:
-                    ctx.arc(75, 75, 35, 0, Math.PI, false);    
-                    ctx.moveTo(65, 65);
+                    crc2.arc(75, 75, 35, 0, Math.PI, false);    
+                    crc2.moveTo(65, 65);
                     break;
 
                 case FEELING.ANGRY:
-                    ctx.arc(75, 75, 35, 0, Math.PI, false);    
-                    ctx.moveTo(65, 65);
+                    crc2.arc(75, 75, 35, 0, Math.PI, false);    
+                    crc2.moveTo(65, 65);
                     break;
 
                 case FEELING.SLEEPY:
-                    ctx.arc(75, 75, 35, 0, Math.PI, false);    
-                    ctx.moveTo(65, 65);
+                    crc2.arc(75, 75, 35, 0, Math.PI, false);    
+                    crc2.moveTo(65, 65);
                     break;
-                */
-
-            //}
+                }
         }
     }
 }
