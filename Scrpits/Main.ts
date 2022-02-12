@@ -15,7 +15,7 @@ namespace DoenerTrainer {
     let completeOrder: string[] = [];
     let choosenIngredients: string[] = [];
 
-    export enum MOOD {
+    export enum FEELING {
         HAPPY,
         ANGRY,
         SLEEPY
@@ -25,7 +25,8 @@ namespace DoenerTrainer {
         BAR,
         PREPARE,
         ORDER,
-        REFILL 
+        REFILL,
+        BREAK
     }
 
     window.addEventListener("load", hdndlLoad);
@@ -65,36 +66,50 @@ namespace DoenerTrainer {
 
         //storage
         crc2.beginPath();
-        crc2.fillRect(780, 50, 480, 150);
-        crc2.clearRect(780, 50, 480, 150);
+        crc2.fillRect(780, 20, 480, 150);
+        crc2.clearRect(780, 20, 480, 150);
         crc2.fill();
         crc2.closePath();
 
         //cuttingboard
         crc2.beginPath();
-        crc2.fillRect(270, 50, 500, 150);
-        crc2.clearRect(270, 50, 500, 150);
+        crc2.fillRect(270, 20, 500, 150);
+        crc2.clearRect(270, 20, 500, 150);
         crc2.fill();
         crc2.closePath();
 
-        //cuttent Order
+        //current Order
         crc2.beginPath();
-        crc2.fillRect(30, 50, 230, 300);
-        crc2.clearRect(30, 50, 230, 300);
+        crc2.fillRect(30, 20, 230, 300);
+        crc2.clearRect(30, 20, 230, 300);
+        crc2.fill();
+        crc2.closePath();
+
+        //Resting Zone
+        crc2.beginPath();
+        crc2.fillRect(30, 330, 230, 130);
+        crc2.clearRect(30, 330, 230, 130);
         crc2.fill();
         crc2.closePath();
 
         //Cashier
         crc2.beginPath();
-        crc2.fillRect(850, 600, 410, 150);
-        crc2.clearRect(850, 600, 410, 150);
+        crc2.fillRect(850, 470, 410, 150);
+        crc2.clearRect(850, 470, 410, 150);
+        crc2.fill();
+        crc2.closePath();
+
+        //Entrance
+        crc2.beginPath();
+        crc2.fillRect(30, 780, 210, 50);
+        crc2.clearRect(30, 780, 210, 50);
         crc2.fill();
         crc2.closePath();
 
         //bar
         crc2.beginPath();
-        crc2.fillRect(30, 500, 810, 250);
-        crc2.clearRect(30, 500, 810, 250);
+        crc2.fillRect(30, 470, 810, 200);
+        crc2.clearRect(30, 470, 810, 200);
         crc2.fill();
         crc2.closePath();
         
