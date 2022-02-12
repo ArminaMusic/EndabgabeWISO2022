@@ -34,6 +34,7 @@ var DoenerTrainer;
         //function to build Dönerbude
         drawDoenerBude();
         window.setInterval(update, 1000);
+        DoenerTrainer.handleCustomers();
     }
     //function to start the game
     function startGame() {
@@ -67,7 +68,7 @@ var DoenerTrainer;
     }
     function drawDoenerBude() {
         //bg canvas
-        DoenerTrainer.crc2.fillStyle = "red";
+        DoenerTrainer.crc2.fillStyle = "grey";
         DoenerTrainer.crc2.fillRect(0, 0, 1300, 800);
         //border
         DoenerTrainer.crc2.beginPath();
@@ -75,50 +76,52 @@ var DoenerTrainer;
         DoenerTrainer.crc2.closePath();
         //storage
         DoenerTrainer.crc2.beginPath();
+        DoenerTrainer.crc2.fillStyle = "lightblue";
         DoenerTrainer.crc2.fillRect(780, 20, 480, 150);
-        DoenerTrainer.crc2.clearRect(780, 20, 480, 150);
         DoenerTrainer.crc2.fill();
         DoenerTrainer.crc2.closePath();
         //cuttingboard
         DoenerTrainer.crc2.beginPath();
+        DoenerTrainer.crc2.fillStyle = "lightblue";
         DoenerTrainer.crc2.fillRect(270, 20, 500, 150);
-        DoenerTrainer.crc2.clearRect(270, 20, 500, 150);
         DoenerTrainer.crc2.fill();
         DoenerTrainer.crc2.closePath();
         //current Order
         DoenerTrainer.crc2.beginPath();
+        DoenerTrainer.crc2.fillStyle = "lightblue";
         DoenerTrainer.crc2.fillRect(30, 20, 230, 300);
-        DoenerTrainer.crc2.clearRect(30, 20, 230, 300);
         DoenerTrainer.crc2.fill();
         DoenerTrainer.crc2.closePath();
         //Resting Zone
         DoenerTrainer.crc2.beginPath();
+        DoenerTrainer.crc2.fillStyle = "lightblue";
         DoenerTrainer.crc2.fillRect(30, 330, 230, 130);
-        DoenerTrainer.crc2.clearRect(30, 330, 230, 130);
         DoenerTrainer.crc2.fill();
         DoenerTrainer.crc2.closePath();
         //Cashier
         DoenerTrainer.crc2.beginPath();
+        DoenerTrainer.crc2.fillStyle = "lightblue";
         DoenerTrainer.crc2.fillRect(850, 470, 410, 150);
-        DoenerTrainer.crc2.clearRect(850, 470, 410, 150);
         DoenerTrainer.crc2.fill();
         DoenerTrainer.crc2.closePath();
         //Entrance
         DoenerTrainer.crc2.beginPath();
+        DoenerTrainer.crc2.fillStyle = "lightblue";
         DoenerTrainer.crc2.fillRect(30, 780, 210, 50);
-        DoenerTrainer.crc2.clearRect(30, 780, 210, 50);
         DoenerTrainer.crc2.fill();
         DoenerTrainer.crc2.closePath();
         //bar
         DoenerTrainer.crc2.beginPath();
+        DoenerTrainer.crc2.fillStyle = "lightblue";
         DoenerTrainer.crc2.fillRect(30, 470, 810, 200);
-        DoenerTrainer.crc2.clearRect(30, 470, 810, 200);
         DoenerTrainer.crc2.fill();
         DoenerTrainer.crc2.closePath();
-        //get game infos from html form
     }
+    //function draw Employees
+    //-> Emplyees.ts
     // function to build a Fooditem from order 
     function buildFoodItem() {
+        //position Employee here
         //clickTheke -> to use
         //check if full 
         //yes --> function: build "FoodItem"

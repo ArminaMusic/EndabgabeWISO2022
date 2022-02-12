@@ -18,6 +18,9 @@ namespace DoenerTrainer {
 
         draw(_position: Vector): void {
 
+            crc2.save();
+            crc2.translate(_position.x, _position.y);
+
             crc2.beginPath();
             crc2.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
             crc2.moveTo(110, 75);
@@ -25,6 +28,7 @@ namespace DoenerTrainer {
             crc2.moveTo(95, 65);
             crc2.arc(90, 65, 5, 0, Math.PI * 2, true);  // Rechtes Auge
             crc2.stroke();
+
 
             //draw mouth with switch-case to get feelings of customer or employee 
                 //emotion will be definend in Employee and Customer Class 

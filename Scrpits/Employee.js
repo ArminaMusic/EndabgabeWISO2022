@@ -24,15 +24,15 @@ var DoenerTrainer;
             updateFeeling(): void {
             this.satisfaction = this.satisfaction - 5;
     
-            if (this.satisfaction >= 67) {
+            if (this.satisfaction >= 60) {
                 this.feeling = FEELING.HAPPY;
             }
     
-            if (this.satisfaction < 67 && this.satisfaction > 33) {
+            if (this.satisfaction < 60 && this.satisfaction > 25) {
                 this.feeling = FEELING.ANGRY;
             }
     
-            if (this.satisfaction <= 33) {
+            if (this.satisfaction <= 25) {
                 this.feeling = FEELING.SLEEPY;
             }
             */
@@ -40,5 +40,4 @@ var DoenerTrainer;
     }
     DoenerTrainer.Employee = Employee;
 })(DoenerTrainer || (DoenerTrainer = {}));
-;
 //# sourceMappingURL=Employee.js.map

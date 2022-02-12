@@ -12,6 +12,8 @@ var DoenerTrainer;
         move(_timeslice) {
         }
         draw(_position) {
+            DoenerTrainer.crc2.save();
+            DoenerTrainer.crc2.translate(_position.x, _position.y);
             DoenerTrainer.crc2.beginPath();
             DoenerTrainer.crc2.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
             DoenerTrainer.crc2.moveTo(110, 75);

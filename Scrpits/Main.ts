@@ -39,6 +39,8 @@ namespace DoenerTrainer {
         //function to build Dönerbude
         drawDoenerBude();
         window.setInterval(update, 1000);
+
+        handleCustomers();
     }
 
     //function to start the game
@@ -78,7 +80,7 @@ namespace DoenerTrainer {
     function drawDoenerBude(): void {
 
         //bg canvas
-        crc2.fillStyle = "red";
+        crc2.fillStyle = "grey";
         crc2.fillRect(0, 0, 1300, 800);
 
         //border
@@ -88,65 +90,67 @@ namespace DoenerTrainer {
 
         //storage
         crc2.beginPath();
+        crc2.fillStyle = "lightblue";
         crc2.fillRect(780, 20, 480, 150);
-        crc2.clearRect(780, 20, 480, 150);
         crc2.fill();
         crc2.closePath();
 
         //cuttingboard
         crc2.beginPath();
+        crc2.fillStyle = "lightblue";
         crc2.fillRect(270, 20, 500, 150);
-        crc2.clearRect(270, 20, 500, 150);
         crc2.fill();
         crc2.closePath();
 
         //current Order
         crc2.beginPath();
+        crc2.fillStyle = "lightblue";
         crc2.fillRect(30, 20, 230, 300);
-        crc2.clearRect(30, 20, 230, 300);
         crc2.fill();
         crc2.closePath();
 
         //Resting Zone
         crc2.beginPath();
+        crc2.fillStyle = "lightblue";
         crc2.fillRect(30, 330, 230, 130);
-        crc2.clearRect(30, 330, 230, 130);
         crc2.fill();
         crc2.closePath();
 
         //Cashier
         crc2.beginPath();
+        crc2.fillStyle = "lightblue";
         crc2.fillRect(850, 470, 410, 150);
-        crc2.clearRect(850, 470, 410, 150);
         crc2.fill();
         crc2.closePath();
 
         //Entrance
         crc2.beginPath();
+        crc2.fillStyle = "lightblue";
         crc2.fillRect(30, 780, 210, 50);
-        crc2.clearRect(30, 780, 210, 50);
         crc2.fill();
         crc2.closePath();
 
         //bar
         crc2.beginPath();
+        crc2.fillStyle = "lightblue";
         crc2.fillRect(30, 470, 810, 200);
-        crc2.clearRect(30, 470, 810, 200);
         crc2.fill();
         crc2.closePath();
-        
-        //get game infos from html form
     }
+
+    //function draw Employees
+        //-> Emplyees.ts
 
     // function to build a Fooditem from order 
     function buildFoodItem(): void {
-    //clickTheke -> to use
-            //check if full 
-                //yes --> function: build "FoodItem"
-                //no --> go to Storage and refill
-                    //check if Storage is full
-                        //yes --> take and go to "cuttingBoard" and cut items (Task-Time -> Countdown)
-                        //no --> funktion : clickIngredient - in Storage -> to refill (Task-Time -> Countdown)
+    //position Employee here
+        //clickTheke -> to use
+                //check if full 
+                    //yes --> function: build "FoodItem"
+                    //no --> go to Storage and refill
+                        //check if Storage is full
+                            //yes --> take and go to "cuttingBoard" and cut items (Task-Time -> Countdown)
+                            //no --> funktion : clickIngredient - in Storage -> to refill (Task-Time -> Countdown)
     }
 
     // function to refill Storage of Ingredients

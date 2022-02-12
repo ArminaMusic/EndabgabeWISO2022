@@ -30,5 +30,4 @@ var DoenerTrainer;
     }
     DoenerTrainer.Customer = Customer;
 })(DoenerTrainer || (DoenerTrainer = {}));
-;
 //# sourceMappingURL=Customer.js.map

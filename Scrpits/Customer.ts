@@ -19,7 +19,7 @@ namespace DoenerTrainer {
             //
         }
     
-        updateFeeling(): void {
+        public updateFeeling(): void {
             this.satisfaction = this.satisfaction - 5;
     
             if (this.satisfaction >= 67) {
@@ -36,4 +36,4 @@ namespace DoenerTrainer {
         }
     
     }
-};
+}
