@@ -34,6 +34,5 @@ namespace DoenerTrainer {
                 this.position.y -= crc2.canvas.height;
         }
 
-        public abstract draw(): void;
     }
 }

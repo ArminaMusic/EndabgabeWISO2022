@@ -5,18 +5,25 @@ Matrikel: 268021
 Datum: 12.02.22
 */
 namespace DoenerTrainer {
+
+    console.log(Moveable);
+    
     export class Human extends Moveable {
         velocity: Vector;
         position: Vector;
         feeling: FEELING;
 
-        constructor(_position: Vector) {//
+        constructor(_position: Vector) {
+            super(_position);
         }
 
         move(_timeslice: number): void {//
         }
 
         draw(_position: Vector): void {
+
+            console.log(_position);
+            
 
             crc2.save();
             crc2.translate(_position.x, _position.y);

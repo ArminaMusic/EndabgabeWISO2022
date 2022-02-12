@@ -6,12 +6,15 @@ Datum: 12.02.22
 */
 var DoenerTrainer;
 (function (DoenerTrainer) {
+    console.log(DoenerTrainer.Moveable);
     class Human extends DoenerTrainer.Moveable {
         constructor(_position) {
+            super(_position);
         }
         move(_timeslice) {
         }
         draw(_position) {
+            console.log(_position);
             DoenerTrainer.crc2.save();
             DoenerTrainer.crc2.translate(_position.x, _position.y);
             DoenerTrainer.crc2.beginPath();
